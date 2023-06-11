@@ -47,6 +47,10 @@
 #include <boost/algorithm/string/join.hpp>
 #include <boost/thread.hpp>
 
+// Fixing Boost 1.73 compile errors
+#include <boost/bind/bind.hpp>
+using namespace boost::placeholders;
+
 #if defined(NDEBUG)
 # error "Titcoin cannot be compiled without assertions."
 #endif
